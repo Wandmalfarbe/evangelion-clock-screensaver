@@ -1,0 +1,71 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+	background: black;
+}
+
+.gui {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+svg {
+  width: 100%;
+  transform: scale(0.9) translateX(0%) perspective(1200px) rotateY(-10deg);
+}
+
+/*#clock-dots-1, #clock-dots-2 {
+	animation: hideshow 1s infinite;
+}*/
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+} 
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: local('DS-Digital Bold Italic'), local('DS-Digital-BoldItalic'),
+        url('ds-digital/DS-Digital-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: local('DS-Digital Italic'), local('DS-Digital-Italic'),
+        url('ds-digital/DS-Digital-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: local('DS-Digital Bold'), local('DS-Digital-Bold'),
+        url('ds-digital/DS-Digital-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: local('DS-Digital'),
+        url('ds-digital/DS-Digital.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+#clock-digit-1, #clock-digit-2, #clock-digit-3, #clock-digit-4, #clock-digit-5, #clock-digit-6, #clock-dots-1, #clock-dots-1 {
+  font-family: 'DS-Digital', 'Times New Roman' !important;
+}
