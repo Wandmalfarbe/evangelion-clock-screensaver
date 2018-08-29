@@ -1,5 +1,3 @@
-/* global document */
-
 'use strict';
 
 function element(id) {

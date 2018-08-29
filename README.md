@@ -12,6 +12,16 @@ A digital clock screensaver inspired by the graphical interfaces from Neon Genes
 
 ![Evangelion Clock Screensaver with the normal skin](images/evangelion-clock-normal.png)
 
+Text from the Screensaver:
+
+- 活動限界まで (Active Time Remaining)
+- 内部 (Internal)
+- 主エネルギー供給システム (Main Energy Supply System)
+- やめる (Stop)
+- スロー (Slow)
+- 正常 (Normal)
+- レース (Racing)
+
 ## Installation
 
 - Download the [latest version](https://github.com/Wandmalfarbe/evangelion-clock-screensaver/releases/latest) of the screensaver from the releases page.
