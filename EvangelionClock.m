@@ -15,9 +15,17 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
     [defaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
         @"0", @"screenDisplayOption", // Default to show only on primary display
         nil]];
+    [defaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+        @"0", @"styleOption", // Default to use normal style
+        nil]];
+    
+    NSString *style = @"/Webview/index.html"; // Normal style
+    if ([defaults integerForKey:@"styleOption"] == 1) {
+        style = @"/Webview/index-red.html"; // Red style
+    }
     
     // Webview
-    NSURL* indexHTMLDocumentURL = [NSURL URLWithString:[[[NSURL fileURLWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingString:@"/Webview/index.html"] isDirectory:NO] description] stringByAppendingFormat:@"?screensaver=1%@", self.isPreview ? @"&is_preview=1" : @""]];
+    NSURL* indexHTMLDocumentURL = [NSURL URLWithString:[[[NSURL fileURLWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingString:style] isDirectory:NO] description] stringByAppendingFormat:@"?screensaver=1%@", self.isPreview ? @"&is_preview=1" : @""]];
 
     WebView* webView = [[WebView alloc] initWithFrame:NSMakeRect(0, 0, frame.size.width, frame.size.height)];
     webView.drawsBackground = NO; // Avoids a "white flash" just before the index.html file has loaded
@@ -76,8 +84,8 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
         }
     }
     
+    [styleOption selectItemAtIndex:[defaults integerForKey:@"styleOption"]];
     [screenDisplayOption selectItemAtIndex:[defaults integerForKey:@"screenDisplayOption"]];
-
     return configSheet;
 }
 
@@ -92,9 +100,10 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
     defaults = [ScreenSaverDefaults defaultsForModuleWithName:evangelionClockModule];
     
     // Update our defaults
+    [defaults setInteger:[styleOption indexOfSelectedItem] forKey:@"styleOption"];
     [defaults setInteger:[screenDisplayOption indexOfSelectedItem]
                forKey:@"screenDisplayOption"];
-    
+
     // Save the settings to disk
     [defaults synchronize];
     
