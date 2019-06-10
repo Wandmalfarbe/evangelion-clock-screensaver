@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 function element(id) {
 	return document.getElementById(id);
 }
 
 function setDigit(number, text) {
-	element("clock-digit-"+number).children[0].textContent = text;
+	element("clock-digit-" + number).children[0].textContent = text;
 }
 
 function setFixedTimeForDebug() {
@@ -18,24 +18,24 @@ function setFixedTimeForDebug() {
 }
 
 function updateClock() {
-	const date = new Date();
-	
-	const hoursInt = date.getHours();
-	const minutesInt = date.getMinutes();
-	const secondsInt = date.getSeconds();
+	var date = new Date();
 
-	let hoursString = hoursInt+"";
-	let minutesString = minutesInt+"";
-	let secondsString = secondsInt+"";
+	var hoursInt = date.getHours();
+	var minutesInt = date.getMinutes();
+	var secondsInt = date.getSeconds();
 
-	if(hoursInt < 10) {
-		hoursString = "0"+hoursInt;
+	var hoursString = hoursInt + "";
+	var minutesString = minutesInt + "";
+	var secondsString = secondsInt + "";
+
+	if (hoursInt < 10) {
+		hoursString = "0" + hoursInt;
 	}
-	if(minutesString < 10) {
-		minutesString = "0"+minutesString;
+	if (minutesString < 10) {
+		minutesString = "0" + minutesString;
 	}
-	if(secondsString < 10) {
-		secondsString = "0"+secondsString;
+	if (secondsString < 10) {
+		secondsString = "0" + secondsString;
 	}
 
 	setDigit(1, hoursString.charAt(0));
@@ -49,4 +49,4 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-//setFixedTimeForDebug();
+// setFixedTimeForDebug();

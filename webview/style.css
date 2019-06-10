@@ -16,7 +16,7 @@ body {
 	overflow: hidden;
 }
 
-svg {
+svg, img{
   width: 100%;
   transform: scale(0.9) translateX(0%) perspective(1200px) rotateY(-10deg);
 }
@@ -63,8 +63,6 @@ svg {
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 #clock-digit-1, #clock-digit-2, #clock-digit-3, #clock-digit-4, #clock-digit-5, #clock-digit-6, #clock-dots-1, #clock-dots-1 {
   font-family: 'DS-Digital', 'Times New Roman' !important;
