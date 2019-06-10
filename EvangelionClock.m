@@ -19,9 +19,9 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
         @"0", @"styleOption", // Default to use normal style
         nil]];
     
-    NSString *style = @"/Webview/index.html"; // Normal style
+    NSString *style = @"/Webview/style-normal.html";
     if ([defaults integerForKey:@"styleOption"] == 1) {
-        style = @"/Webview/index-red.html"; // Red style
+        style = @"/Webview/style-red.html";
     }
     
     // Webview
