@@ -118,6 +118,14 @@ module.exports = function(grunt) {
 					src: ["*.min.css"],
 					dest: "<%= settings.tempDirectory %>/"
 				}]
+			},
+			fonts: {
+				files: [{
+					expand: true,
+					cwd: "<%= settings.srcDirectory %>",
+					src: ["ds-digital/*"],
+					dest: "<%= settings.distDirectory %>/"
+				}]
 			}
 		},
 
@@ -234,6 +242,7 @@ module.exports = function(grunt) {
 		"replace:style_red",
 		"htmlmin",
 		"copy:html_temp_to_dist",
+		"copy:fonts",
 		"clean:temp"
 	]);
 
