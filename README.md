@@ -2,15 +2,15 @@
 
 # Evangelion Clock Screensaver
 
-A digital clock screensaver inspired by the graphical interfaces from Neon Genesis Evengelion. It displays the time in hours, minutes and seconds and is available in two styles.
-
-**Red**
-
-![Evangelion Clock Screensaver with the red skin](images/evangelion-clock-red.png)
+A digital clock screensaver for mac inspired by the graphical interfaces from Neon Genesis Evengelion. It displays the time in hours, minutes and seconds and is available in two styles.
 
 **Normal**
 
 ![Evangelion Clock Screensaver with the normal skin](images/evangelion-clock-normal.png)
+
+**Red**
+
+![Evangelion Clock Screensaver with the red skin](images/evangelion-clock-red.png)
 
 Text from the Screensaver:
 
