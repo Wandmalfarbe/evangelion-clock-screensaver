@@ -30,7 +30,8 @@ module.exports = function(grunt) {
 				"qualified-headings": false,
 				"unique-headings": false,
 				"box-model": false,
-				"bulletproof-font-face": false
+				"bulletproof-font-face": false,
+				"ids": false
 			}
 		},
 
@@ -95,6 +96,14 @@ module.exports = function(grunt) {
 			},
 			html_src_to_temp: {
 				files: [{
+					src: ["<%= settings.srcDirectory %>html-template-3d.html"],
+					dest: "<%= settings.tempDirectory %>/style-normal-3d.html"
+				},
+				{
+					src: ["<%= settings.srcDirectory %>html-template-3d.html"],
+					dest: "<%= settings.tempDirectory %>/style-red-3d.html"
+				},
+				{
 					src: ["<%= settings.srcDirectory %>html-template.html"],
 					dest: "<%= settings.tempDirectory %>/style-normal.html"
 				},
@@ -141,6 +150,40 @@ module.exports = function(grunt) {
 		},
 
 		replace: {
+			style_normal_3d: {
+				options: {
+					patterns: [{
+						match: "<!-- svg -->",
+						replacement: function() {
+							return grunt.file.read("temp/style-normal.svg");
+						}
+					}],
+					usePrefix: false
+				},
+				files: [{
+					expand: true,
+					flatten: true,
+					src: ["<%= settings.tempDirectory %>/style-normal-3d.html"],
+					dest: "<%= settings.tempDirectory %>/"
+				}]
+			},
+			style_red_3d: {
+				options: {
+					patterns: [{
+						match: "<!-- svg -->",
+						replacement: function() {
+							return grunt.file.read("temp/style-red.svg");
+						}
+					}],
+					usePrefix: false
+				},
+				files: [{
+					expand: true,
+					flatten: true,
+					src: ["<%= settings.tempDirectory %>/style-red-3d.html"],
+					dest: "<%= settings.tempDirectory %>/"
+				}]
+			},
 			style_normal: {
 				options: {
 					patterns: [{
@@ -187,7 +230,8 @@ module.exports = function(grunt) {
 						{
 							cleanupIDs: {
 								preservePrefixes: [
-									"clock-digit"
+									"clock-digit",
+									"clock-dots"
 								]
 							}
 						}
@@ -238,6 +282,8 @@ module.exports = function(grunt) {
 		"copy:html_src_to_temp",
 		"assets_inline",
 		"svgmin",
+		"replace:style_normal_3d",
+		"replace:style_red_3d",
 		"replace:style_normal",
 		"replace:style_red",
 		"htmlmin",

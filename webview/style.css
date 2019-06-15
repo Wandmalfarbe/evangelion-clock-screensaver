@@ -14,11 +14,17 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 }
 
 svg, img{
   width: 100%;
-  transform: scale(0.9) translateX(0%) perspective(1200px) rotateY(-10deg);
+  height: auto;
+
+  /* center vertically */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*#clock-dots-1, #clock-dots-2 {
@@ -30,7 +36,7 @@ svg, img{
   49% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 0; }
-} 
+}
 
 @font-face {
     font-family: 'DS-Digital';
@@ -64,6 +70,6 @@ svg, img{
     font-style: normal;
 }
 
-#clock-digit-1, #clock-digit-2, #clock-digit-3, #clock-digit-4, #clock-digit-5, #clock-digit-6, #clock-dots-1, #clock-dots-1 {
-  font-family: 'DS-Digital', 'Times New Roman' !important;
+#clock-digit-1, #clock-digit-2, #clock-digit-3, #clock-digit-4, #clock-digit-5, #clock-digit-6, #clock-dots-1, #clock-dots-2 {
+  font-family: 'DS-Digital', 'Times New Roman';
 }

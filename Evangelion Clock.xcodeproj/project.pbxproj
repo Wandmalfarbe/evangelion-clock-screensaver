@@ -12,7 +12,6 @@
 		5038C1E3211C827700BCAC4A /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5038C1DA211C827700BCAC4A /* ConfigureSheet.xib */; };
 		5038C1E5211C827700BCAC4A /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5038C1DC211C827700BCAC4A /* thumbnail.png */; };
 		5038C1E6211C827700BCAC4A /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5038C1DD211C827700BCAC4A /* thumbnail@2x.png */; };
-		5038C1E7211C827700BCAC4A /* thumbnail_source.png in Resources */ = {isa = PBXBuildFile; fileRef = 5038C1DE211C827700BCAC4A /* thumbnail_source.png */; };
 		5038C1EC211C83EF00BCAC4A /* Webview in Resources */ = {isa = PBXBuildFile; fileRef = 5038C1EB211C83EF00BCAC4A /* Webview */; };
 		5038C1EF211C928000BCAC4A /* EvangelionClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5038C1ED211C928000BCAC4A /* EvangelionClock.m */; };
 		5038C1F0211C928000BCAC4A /* EvangelionClock.h in Headers */ = {isa = PBXBuildFile; fileRef = 5038C1EE211C928000BCAC4A /* EvangelionClock.h */; };
@@ -28,7 +27,6 @@
 		5038C1DB211C827700BCAC4A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5038C1DC211C827700BCAC4A /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		5038C1DD211C827700BCAC4A /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
-		5038C1DE211C827700BCAC4A /* thumbnail_source.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail_source.png; sourceTree = "<group>"; };
 		5038C1EB211C83EF00BCAC4A /* Webview */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Webview; sourceTree = "<group>"; };
 		5038C1ED211C928000BCAC4A /* EvangelionClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvangelionClock.m; sourceTree = "<group>"; };
 		5038C1EE211C928000BCAC4A /* EvangelionClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvangelionClock.h; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				5038C1DB211C827700BCAC4A /* Info.plist */,
 				5038C1DC211C827700BCAC4A /* thumbnail.png */,
 				5038C1DD211C827700BCAC4A /* thumbnail@2x.png */,
-				5038C1DE211C827700BCAC4A /* thumbnail_source.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5038C1EC211C83EF00BCAC4A /* Webview in Resources */,
-				5038C1E7211C827700BCAC4A /* thumbnail_source.png in Resources */,
 				5038C1E6211C827700BCAC4A /* thumbnail@2x.png in Resources */,
 				5038C1E3211C827700BCAC4A /* ConfigureSheet.xib in Resources */,
 				5038C1E5211C827700BCAC4A /* thumbnail.png in Resources */,
