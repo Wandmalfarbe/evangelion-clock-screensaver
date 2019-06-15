@@ -7,18 +7,18 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
 
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     if (!(self = [super initWithFrame:frame isPreview:isPreview])) return nil;
-    
+
     // Preference Defaults
     ScreenSaverDefaults *defaults;
     defaults = [ScreenSaverDefaults defaultsForModuleWithName:evangelionClockModule];
-    
+
     [defaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
         @"0", @"screenDisplayOption", // Default to show only on primary display
         nil]];
     [defaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
         @"0", @"styleOption", // Default to use normal style
         nil]];
-    
+
     NSString *style = @"/Webview/style-normal-3d.html";
     switch ([defaults integerForKey:@"styleOption"]) {
         case 0:
@@ -37,18 +37,18 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
             style = @"/Webview/style-normal-3d.html";
             break;
     }
-    
+
     // Webview
     NSURL* indexHTMLDocumentURL = [NSURL URLWithString:[[[NSURL fileURLWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingString:style] isDirectory:NO] description] stringByAppendingFormat:@"?screensaver=1%@", self.isPreview ? @"&is_preview=1" : @""]];
 
     WebView* webView = [[WebView alloc] initWithFrame:NSMakeRect(0, 0, frame.size.width, frame.size.height)];
     webView.drawsBackground = NO; // Avoids a "white flash" just before the index.html file has loaded
     [webView.mainFrame loadRequest:[NSURLRequest requestWithURL:indexHTMLDocumentURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0]];
-    
+
     // Show on screens based on preferences
     NSArray* screens = [NSScreen screens];
     NSScreen* primaryScreen = [screens objectAtIndex:0];
-    
+
     switch ([defaults integerForKey:@"screenDisplayOption"]) {
         // Primary screen (System Preferences > Displays).
         // The screen the menubar is shown on under 'arrangement'
@@ -89,7 +89,7 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
 {
     ScreenSaverDefaults *defaults;
     defaults = [ScreenSaverDefaults defaultsForModuleWithName:evangelionClockModule];
-    
+
     if (!configSheet)
     {
         if (![NSBundle loadNibNamed:@"ConfigureSheet" owner:self])
@@ -97,7 +97,7 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
             NSLog( @"Failed to load configure sheet." );
         }
     }
-    
+
     [styleOption selectItemAtIndex:[defaults integerForKey:@"styleOption"]];
     [screenDisplayOption selectItemAtIndex:[defaults integerForKey:@"screenDisplayOption"]];
     return configSheet;
@@ -112,7 +112,7 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
 {
     ScreenSaverDefaults *defaults;
     defaults = [ScreenSaverDefaults defaultsForModuleWithName:evangelionClockModule];
-    
+
     // Update our defaults
     [defaults setInteger:[styleOption indexOfSelectedItem] forKey:@"styleOption"];
     [defaults setInteger:[screenDisplayOption indexOfSelectedItem]
@@ -120,7 +120,7 @@ static NSString * const evangelionClockModule = @"de.pascal-wagler.evangelion-cl
 
     // Save the settings to disk
     [defaults synchronize];
-    
+
     // Close the sheet
     [[NSApplication sharedApplication] endSheet:configSheet];
 }
