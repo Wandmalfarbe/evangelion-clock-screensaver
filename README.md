@@ -29,15 +29,15 @@ Text from the Screensaver:
 3. Install the screensaver by double-clicking on the file with the extension `.saver`.
 4. A popup with the following text might appear:
 
-  > “Evangelion Clock.saver” can’t be opened because it is from an unidentified developer.
-  > Your security preferences allow installation of only apps from the App Store and identified developers.
+    > “Evangelion Clock.saver” can’t be opened because it is from an unidentified developer.
+    > Your security preferences allow installation of only apps from the App Store and identified developers.
 
     If this popup appears, proceed with step 5; Otherwise proceed with step 7.
 5. Open *System Preferences* > *Security & Privacy* and click the *Open Anyway* button on the lower right of the settings window.
 6. In the resulting Dialog click *Open*.
 7. A popup with the following text appears:
 
-  > The “Evangelion Clock” screen saver must be installed before you can use it. Do you want to install it now?
+    > The “Evangelion Clock” screen saver must be installed before you can use it. Do you want to install it now?
 8. The first Option should be selected. Click *Install*.
 9. You can find the screensaver by opening *System Preferences* > *Desktop & Screen Saver* > *Screen Saver*.
 
