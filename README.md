@@ -33,7 +33,7 @@ Text from the Screensaver:
     > Your security preferences allow installation of only apps from the App Store and identified developers.
 
     If this popup appears, proceed with step 5; Otherwise proceed with step 7.
-5. Open *System Preferences* > *Security & Privacy* and click the *Open Anyway* button on the lower right of the settings window.
+5. Open *System Preferences* > *Security & Privacy* > *General* and click the *Open Anyway* button on the lower right of the settings window.
 6. In the resulting Dialog click *Open*.
 7. A popup with the following text appears:
 
