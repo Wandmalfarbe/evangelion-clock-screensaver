@@ -20,18 +20,17 @@
 	"license": "BSD-3-Clause",
 	"devDependencies": {
 		"grunt": "^1.4.1",
-		"grunt-assets-inline": "^1.1.3",
+		"grunt-assets-inline": "^1.2.4",
 		"grunt-contrib-clean": "^2.0.0",
 		"grunt-contrib-copy": "^1.0.0",
 		"grunt-contrib-csslint": "^2.0.0",
-		"grunt-contrib-cssmin": "^3.0.0",
-		"grunt-contrib-htmlmin": "^3.0.0",
-		"grunt-contrib-jshint": "^2.0.0",
-		"grunt-contrib-uglify": "^4.0.0",
+		"grunt-contrib-cssmin": "^4.0.0",
+		"grunt-contrib-htmlmin": "^3.1.0",
+		"grunt-contrib-jshint": "^3.1.1",
+		"grunt-contrib-uglify": "^5.0.1",
 		"grunt-eslint": "^24.0.0",
 		"grunt-htmllint": "^0.3.0",
 		"grunt-replace": "^2.0.2",
-		"grunt-svgmin": "^6.0.0",
-		"nth-check": "^2.0.1"
+		"grunt-svgmin": "^6.0.1"
 	}
 }
