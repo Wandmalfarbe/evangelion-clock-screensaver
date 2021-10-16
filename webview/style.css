@@ -19,12 +19,7 @@ body {
 
 svg, img {
 	width: 100%;
-	height: auto;
-
-	/* center vertically */
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	height: 100%;
 }
 
 /*#clock-dots-1, #clock-dots-2 {
