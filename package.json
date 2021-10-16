@@ -17,6 +17,7 @@
 		"url": "https://github.com/Wandmalfarbe/evangelion-clock-screensaver"
 	},
 	"private": false,
+	"license": "BSD-3-Clause",
 	"devDependencies": {
 		"grunt": "^1.0.3",
 		"grunt-assets-inline": "^1.1.3",
