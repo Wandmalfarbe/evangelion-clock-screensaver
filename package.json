@@ -19,7 +19,7 @@
 	"private": false,
 	"license": "BSD-3-Clause",
 	"devDependencies": {
-		"grunt": "^1.4.1",
+		"grunt": "^1.5.3",
 		"grunt-assets-inline": "^1.2.4",
 		"grunt-contrib-clean": "^2.0.0",
 		"grunt-contrib-copy": "^1.0.0",
