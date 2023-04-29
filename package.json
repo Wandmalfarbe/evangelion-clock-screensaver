@@ -31,6 +31,6 @@
 		"grunt-eslint": "^24.0.0",
 		"grunt-htmllint": "^0.3.0",
 		"grunt-replace": "^2.0.2",
-		"grunt-svgmin": "^6.0.1"
+		"grunt-svgmin": "^7.0.0"
 	}
 }
